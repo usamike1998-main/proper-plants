@@ -30,28 +30,28 @@ button:hover {
   cursor: pointer;
 }
 
-.cart-item:not(:last-child) {
+.cart__item:not(:last-child) {
   border-bottom: 1px solid #eee;
 }
 
-.cart-item {
+.cart__item {
   padding: 0.25rem;
   display: grid;
   gap: 0.25rem;
 }
 
-.cart-item-quantity {
+.cart__item-quantity {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.cart-item-quantity span {
+.cart__item-quantity span {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.plants ul {
+.plants {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20ch, 1fr));
   gap: 1ch;
