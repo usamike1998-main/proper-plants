@@ -1,4 +1,4 @@
-export default function ShopCart({ cart, onAddToCart, onSubstractFromCart }) {
+export default function ShopCart({ cart, onAddInCart, onSubstractInCart }) {
   const shopCart = cart.map((cartItem) => {
     <li key={cartItem.id}>
       <span onClick={onSubstractInCart}>-</span>
@@ -6,4 +6,6 @@ export default function ShopCart({ cart, onAddToCart, onSubstractFromCart }) {
       <span onClick={onAddInCart}>+</span>
     </li>;
   });
+
+  render();
 }
