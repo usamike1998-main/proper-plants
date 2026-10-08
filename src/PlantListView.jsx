@@ -8,7 +8,7 @@ export default function PlantListView({ plants, onAddItem }) {
   return (
     <div>
       <h2>Plants</h2>
-      <ul>{plantItems}</ul>
+      <ul className="plants">{plantItems}</ul>
     </div>
   );
 }

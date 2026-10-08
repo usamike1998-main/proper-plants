@@ -1,8 +1,8 @@
 export default function PlantItem({ plant, onAddItem }) {
   return (
-    <li className="plant___item">
+    <li className="plantItem">
       <h3>{plant.name}</h3>
-      <span>{plant.image}</span>
+      <span className="plantItem__image">{plant.image}</span>
       <button onClick={() => onAddItem(plant)}>Add to Cart</button>
     </li>
   );

@@ -22,7 +22,7 @@ export default function App() {
       if (cartItem.id === item.id) {
         return { ...cartItem, quantity: item.quantity - 1 };
       }
-      return item;
+      return cartItem;
     });
     const filteredCart = newCart.filter((item) => item.quantity > 0);
     setCart(filteredCart);
@@ -35,7 +35,7 @@ export default function App() {
     } else {
       const updatedCart = cart.map((updatedCartItem) => {
         if (updatedCartItem.id === item.id) {
-          return { ...itemInCart, quantity: itemInCart.quantity + 1 };
+          return { ...updatedCartItem, quantity: updatedCartItem.quantity + 1 };
         }
         return updatedCartItem;
       });
@@ -46,12 +46,14 @@ export default function App() {
   return (
     <>
       <h1>ProperPlants</h1>
-      <PlantListView onAddItem={onAddItem} plants={plants}></PlantListView>
-      <ShopCart
-        cart={cart}
-        onAddInCart={onAddInCart}
-        onSubstractInCart={onSubstractInCart}
-      ></ShopCart>
+      <main>
+        <PlantListView onAddItem={onAddItem} plants={plants}></PlantListView>
+        <ShopCart
+          cart={cart}
+          onAddInCart={onAddInCart}
+          onSubstractInCart={onSubstractInCart}
+        ></ShopCart>
+      </main>
     </>
   );
 }
