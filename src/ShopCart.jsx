@@ -1,11 +1,21 @@
+import ShopCartItem from "./ShopCartItem";
+
 export default function ShopCart({ cart, onAddInCart, onSubstractInCart }) {
   const shopCart = cart.map((cartItem) => {
-    <li key={cartItem.id}>
-      <span onClick={onSubstractInCart}>-</span>
-      <span> {cartItem.quantity}</span>
-      <span onClick={onAddInCart}>+</span>
-    </li>;
+    return (
+      <ShopCartItem
+        key={cartItem.id}
+        cartItem={cartItem}
+        onAddInCart={onAddInCart}
+        onSubstractInCart={onSubstractInCart}
+      ></ShopCartItem>
+    );
   });
 
-  render();
+  return (
+    <section className="shopCart">
+      <h2>Cart</h2>
+      <ul className="shopCart__list">{shopCart}</ul>
+    </section>
+  );
 }

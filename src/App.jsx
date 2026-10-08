@@ -1,5 +1,5 @@
-import { plants as PLANTS } from "data.js";
-import useState from "react";
+import plants from "./data.js";
+import { useState } from "react";
 import ShopCart from "./ShopCart";
 import PlantListView from "./PlantListView";
 
@@ -46,7 +46,7 @@ export default function App() {
   return (
     <>
       <h1>ProperPlants</h1>
-      <PlantListView onAddItem={onAddItem} plants={PLANTS}></PlantListView>
+      <PlantListView onAddItem={onAddItem} plants={plants}></PlantListView>
       <ShopCart
         cart={cart}
         onAddInCart={onAddInCart}
